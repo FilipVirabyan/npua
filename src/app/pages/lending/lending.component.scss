@@ -1,0 +1,247 @@
+main {
+  margin-top: 50px;
+}
+
+.poster-section {
+  width: 100%;
+}
+
+.feed {
+  position: relative;
+
+  .news {
+    .title {
+      position: absolute;
+      top: -100px;
+      z-index: 10;
+    }
+  }
+
+  .uni-sections {
+    height: 425px;
+    width: 100%;
+    margin-top: 100px;
+    position: relative;
+
+    .title {
+      position: absolute;
+      top: 265px;
+      z-index: 10;
+      left: 80px;
+      color: var(--primary-contrast);
+      border-color: var(--primary-contrast)
+    }
+
+    .parallax-image {
+      width: 100%;
+      background-image: url('../../../assets/images/sections.png');
+
+      /* Full height */
+      height: 100%;
+
+      /* Create the parallax scrolling effect */
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .sections-list {
+      position: absolute;
+      top: 340px;
+
+      div {
+        .section-icon {
+          background-color: var(--primary-contrast);
+          border-radius: 20px;
+          margin: 10px;
+          padding: 7px;
+          transition: transform 330ms ease-in-out;
+
+          img {
+            width: 140px;
+          }
+        }
+
+        .section-title {
+          color: var(--primary-color);
+          text-transform: capitalize;
+          font-size: 14px;
+          display: none;
+          position: absolute;
+          text-align: center;
+          font-weight: 700;
+          width: 200px;
+        }
+
+        .section-icon:hover {
+          transform: scale(1.1);
+        }
+
+        &:hover {
+
+          .section-title {
+            display: block;
+          }
+        }
+
+      }
+    }
+  }
+
+  .mission-section {
+    margin-top: 120px;
+    width: 100%;
+    height: calc(100vh - 140px);
+    background-image: url('../../../assets/images/logo-rounded.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    div {
+      width: 70%;
+      text-align: center;
+      font-family: 'Tahoma', sans-serif;
+      line-height: 35px;
+      color: var(--secondary-text);
+
+      .title {
+        border: none;
+        font-size: var(--title-size);
+      }
+    }
+  }
+
+  .stat-section {
+    height: 240px;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--primary-contrast);
+    //padding: 40px 60px;
+    .stat-item {
+      padding: 0 80px;
+
+      &:not(:last-child) {
+        border-right: 1px solid white;
+      }
+    }
+
+    .number {
+      font-size: 34px;
+      font-weight: 900;
+    }
+
+  }
+
+  .media-section {
+    margin-top: 40px;
+
+    .title-section {
+      .sub-title {
+        color: var(--primary-color);
+      }
+
+    }
+  }
+
+}
+
+.feed-padding {
+  padding: 0 80px;
+}
+
+@media screen and (max-width: 992px) {
+  main {
+    margin-top: var(--header-height);
+  }
+  .uni-sections {
+    flex-direction: column;
+
+    .title {
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%) !important;
+    }
+
+    .section-icon {
+      img {
+        width: 80px !important;
+      }
+    }
+    .section-title {
+      display: none;
+    }
+  }
+  .sections-list {
+    position: inherit;
+    top:255px !important;
+  }
+  .mission-section{
+    height: unset !important;
+    margin-top: 190px !important;
+    div{
+      line-height: 30px !important;
+      width: 80% !important;
+    }
+  }
+  .stat-section {
+    height: 665px !important;
+
+    div {
+      flex-direction: column;
+
+      .stat-item {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 80px !important;
+
+        p {
+          margin-right: 15px;
+          text-align: center;
+        }
+
+        &:not(:last-child) {
+          border-right: unset!important;
+          border-bottom: 1px solid white;
+        }
+      }
+    }
+  }
+  .media-section {
+    .title-section {
+      flex-direction: column;
+
+      .title {
+        margin-bottom: 10px !important;
+      }
+
+      .sub-title {
+        margin-bottom: 20px;
+      }
+    }
+
+    .cards {
+      justify-content: center !important;
+      padding: unset;
+
+      app-card {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .news {
+    .title {
+      position: inherit !important;
+      margin-bottom: 25px;
+    }
+
+    .cards {
+      justify-content: center !important;
+      padding: unset;
+
+      app-card {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+<main>
+  <section class="d-flex header justify-content-between">
+    <img src="assets/images/logo.svg" routerLink="/" alt="logo" class="header-logo cursor-pointer">
+    <div class="header-search d-flex align-items-center justify-content-center">
+      <i class="fa fa-search icon"></i>
+      <input type="text" [placeholder]="'search'|translate">
+        <img [src]="selectedLangImg"
+             class="cursor-pointer flag"
+             [matMenuTriggerFor]="menu" alt="flag">
+      <mat-menu #menu="matMenu">
+        <img src="assets/images/arm-flag.png"
+             (click)="selectLang('am')"
+             mat-menu-item
+             class="cursor-pointer flag"
+              alt="flag">
+        <img src="assets/images/rus-flag.png"
+             (click)="selectLang('ru')"
+             mat-menu-item
+             class="cursor-pointer flag"
+             alt="flag">
+        <img src="assets/images/us-flag.png"
+             (click)="selectLang('en')"
+             mat-menu-item
+             class="cursor-pointer flag"
+             alt="flag">
+      </mat-menu>
+    </div>
+  </section>
+  <section [class.opened]="dropdownOpened"
+           class="navigation d-flex align-items-center justify-content-center">
+    <div>
+      <ul class="d-flex">
+        <li class="item" *ngFor="let item of navigationSections">
+          <a routerLinkActive="active"
+             [routerLink]="item.url">
+            {{item.name| translate}}
+          </a>
+        </li>
+      </ul>
+    </div>
+    <app-hamburger-btn
+      (opened)="dropdownOpened = $event">
+    </app-hamburger-btn>
+  </section>
+</main>
+

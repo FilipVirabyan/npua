@@ -1,8 +1,112 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$npua-primary: mat.define-palette(mat.$indigo-palette);
+$npua-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$npua-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$npua-theme: mat.define-light-theme((
+  color: (
+    primary: $npua-primary,
+    accent: $npua-accent,
+    warn: $npua-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($npua-theme);
+
 html, body {
-  height: 100%;
+  --primary-color: #322871;
+  --primary-contrast: white;
+  --secondary-text: #505050;
+  --placeholder-color: #aba9a9;
+  --header-text-size: 22px;
+  --title-size: 25px;
+  --header-height: 130px;
 }
 
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--placeholder-color);
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: var(--placeholder-color);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--placeholder-color);
+}
+.title{
+  font-weight: 700;
+  font-family: Tahoma, Roboto, sans-serif;
+  font-size: var(--title-size);
+  border-bottom: 4px solid var(--primary-color);
+  color: var(--primary-color);
+  padding-bottom: 15px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.card-btn {
+  width: 100%;
+  background-color: var(--primary-contrast);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.card-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--primary-contrast);
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.flag {
+  height: 30px !important;
+}
+.mat-menu-panel{
+  margin-top: 10px;
+}
+.mat-menu-content{
+  background: rgba(189, 189, 189, 0.35);
+  .flag{
+    margin: 5px;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,0 +1,142 @@
+<main class="mb-5">
+  <section>
+    <img src="assets/images/cover.png" alt="" class="poster-section">
+  </section>
+  <section class="feed">
+    <section class="news feed-padding">
+      <div class="title">
+        <span>{{'latest_news'|translate}}</span>
+      </div>
+      <div class="cards d-flex justify-content-between flex-wrap">
+        <app-card *ngFor="let card of newsCards"
+                  class="cursor-pointer"
+                  [card]="card">
+          <div class="card-btn" routerLink="/item-details/news">
+            {{'see_more'|translate}}
+          </div>
+        </app-card>
+      </div>
+    </section>
+    <section class="uni-sections d-flex justify-content-center">
+      <div class="parallax-image"></div>
+      <div class="title">
+        <span>{{'admission'|translate}}</span>
+      </div>
+      <div class="sections-list d-flex flex-wrap justify-content-between">
+        <div>
+          <div class="section-icon">
+            <img src="assets/images/sec-8.png" alt="">
+          </div>
+          <span class="section-title">Ճյուղային տնտեսագիտություն և կառավարում</span>
+        </div>
+        <div>
+          <div class="section-icon">
+            <img src="assets/images/sec-7.png" alt="">
+          </div>
+          <span class="section-title">Ֆիզիկա-մաթեմատիկական առարկաներ</span>
+        </div>
+        <div>
+          <div class="section-icon">
+            <img src="assets/images/sec-6.png" alt="">
+          </div>
+          <span class="section-title">Մեքենաշինական տեխնոլոգիաներ և տրանսպորտային համակարգեր</span>
+        </div>
+        <div>
+          <div class="section-icon">
+            <img src="assets/images/sec-5.png" alt="">
+          </div>
+          <span class="section-title">Շինարարական ճարտարագիտություն</span>
+        </div>
+        <div>
+          <div class="section-icon">
+            <img src="assets/images/sec-4.png" alt="">
+          </div>
+          <span class="section-title">Մեխանիկա և գրաֆիկա</span>
+        </div>
+        <div>
+          <div class="section-icon">
+            <img src="assets/images/sec-3.png" alt="">
+          </div>
+          <span class="section-title">Հումանիտար առարկաներ և մարմնակրթություն</span>
+        </div>
+        <div>
+          <div class="section-icon">
+            <img src="assets/images/sec-2.png" alt="">
+          </div>
+          <span class="section-title">Էլեկտրաէներգետիկական, ինֆորմացիոն և ավտոմատացման համակարգեր</span>
+        </div>
+        <div>
+          <div class="section-icon">
+            <img src="assets/images/sec-1.png" alt="">
+          </div>
+          <span class="section-title">Տեքստիլ և թեթև արդյունաբերության արտադրանքի տեխնոլոգիա և դիզայն</span>
+        </div>
+      </div>
+    </section>
+    <section class="mission-section d-flex flex-column justify-content-center align-items-center">
+      <div class="d-flex flex-column justify-content-center align-items-center">
+         <span class="title">
+        Առաքելությունը
+      </span>
+        <p>
+          Մինչբուհական, բուհական և հետբուհական, ինչպես նաև շարունակական կրթության ծրագրերով ուսումնական ծառայությունների մատուցումը և գիտական ծրագրերի իրականացումը` տարածաշրջանի տնտեսության և հասարակության կրթական ու տեխնոլոգիական կարիքները բավարարելու նպատակով: Տարածաշրջանի գիտատեխնիկական ներուժի զարգացմանը, արդյունաբերական ու տեղեկատվական ենթակառուցվածքների ան միջավայրում արդյունավետ գործելու համար դպրոցականներին և ուսանողներին կյանքին, կարիերայի ընտրությանը, մասնագիտական կողմնորոշմանն ու առաջընթացին նախապատրաստելը: Գյումրիում հիմնադրվող Տեխնոպարկի կայացման հիմնախնդիրների լուծմանը օժանդակելը և մասնակցությունը, նրա համար որակյալ, արդի գիտական և տեխնոլոգիական գիտելիքներով զինված, ակտիվ և ստեղծագործող, նորարարական մտածողությամբ օժտված աշխատակազմի ձևավորմանը նպաստելը:
+        </p>
+      </div>
+    </section>
+    <section class="stat-section d-flex justify-content-center align-items-center">
+      <div class="d-flex justify-content-between">
+        <div class="stat-item">
+          <span class="number">1,000</span>
+          <p class="stat">
+            Ուսանող
+          </p>
+        </div>
+        <div class="stat-item">
+          <span class="number">5,000</span>
+          <p class="stat">
+            Շրջանավարտ
+          </p>
+        </div>
+        <div class="stat-item">
+          <span class="number">50</span>
+          <p class="stat">
+            Դասախոս
+          </p>
+        </div>
+        <div class="stat-item">
+          <span class="number">30</span>
+          <p class="stat">
+            Թեկնածու
+          </p>
+        </div>
+        <div class="stat-item">
+          <span class="number">20</span>
+          <p class="stat">
+            Դոկտոր
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="media-section feed-padding">
+      <div class="title-section d-flex justify-content-between">
+        <div class="title mb-5">
+          <span>{{'media_photos'|translate}}</span>
+        </div>
+        <div class="d-flex align-items-center">
+          <span class="sub-title cursor-pointer" routerLink="/list/media">{{'see_more'|translate}}</span>
+        </div>
+      </div>
+
+      <div class="cards d-flex flex-wrap justify-content-between">
+        <app-card *ngFor="let card of albumCards"
+                  class="cursor-pointer"
+                  [showTitle]="false"
+                  [card]="card">
+        </app-card>
+      </div>
+
+    </section>
+  </section>
+</main>
+<app-main-footer>
+</app-main-footer>

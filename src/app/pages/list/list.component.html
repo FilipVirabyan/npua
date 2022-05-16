@@ -1,0 +1,32 @@
+<main>
+  <div class="d-flex w-100 justify-content-center">
+    <input placeholder="Որոնում" [formControl]="filterInput"/>
+  </div>
+  <section class="d-flex flex-wrap list">
+    <ng-container *ngIf="sectionName==='media';else news">
+      <app-card *ngFor="let card of filteredCards"
+                class="cursor-pointer mr-1 my-2"
+                [showTitle]="false"
+                (selectCard)="openSlider($event)"
+                [card]="card"></app-card>
+      <ng-image-fullscreen-view
+        [images]="imageList"
+        [imageIndex]="sliderIndex"
+        [show]="showSlider"
+        (close)="closeEventHandler()"></ng-image-fullscreen-view>
+    </ng-container>
+    <ng-template #news>
+      <app-card *ngFor="let card of filteredCards"
+                class="mr-1 my-2"
+                [card]="card">
+        <div class="card-btn">
+          Տեսնել Ավելին
+        </div>
+      </app-card>
+    </ng-template>
+  </section>
+
+  <app-main-footer>
+  </app-main-footer>
+</main>
+

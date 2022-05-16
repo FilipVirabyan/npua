@@ -1,0 +1,13 @@
+<section class="card mx-2" (click)="onClick()">
+  <img [src]="card?.image"
+       alt="example"
+       class="card-image">
+  <div class="px-2">
+    <div class="px-1 mt-4">
+      <span class="card-title" *ngIf="showTitle">{{card?.title| slice:0:40}}</span>
+      <p class="card-info">{{(card?.text| slice:0:70) +'...'}}</p>
+    </div>
+    <ng-content>
+    </ng-content>
+  </div>
+</section>

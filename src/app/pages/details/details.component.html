@@ -1,0 +1,82 @@
+<main class="d-flex">
+  <section class="col-2 side-bar"
+           *ngIf="!isFullScreen">
+    <section class="navigation d-flex">
+      <ul>
+        <li class="item cursor-pointer"
+            (click)="changeActiveTab(item.name)"
+            *ngFor="let item of navigationSections">
+          <a [class.active]="item.name === activeTab">
+            {{item.name}}
+          </a>
+        </li>
+      </ul>
+    </section>
+  </section>
+  <section class="main p-0"
+           [ngClass]="isFullScreen?'col-12 full':'col-10'">
+   <div class="content">
+
+       <br><br><p style="text-align:justify">&nbsp; &nbsp;Հայաստանի ազգային պոլիտեխնիկական համալսարանը, համաձայն «Հայաստանի Հանրապետության բարձրագույն ուսումնական հաստատություններում մագիստրատուրայի ընդունելության կարգ»-ի (ՀՀ կառավարության 2007 թվականի դեկտեմբերի 6-ի N 1193–Ն որոշում) և ՀՀ ԿԳՄՍ նախարարի 2021թ. մայիսի 14-ի 752-Ա/2 &nbsp;հրամանի հայտարարում է 2021-2022 ուս.տարվա առկա մագիստրատուրայի ընդունելություն&nbsp;<a href="/files/file/haytararutyun_magistr.pdf" target="_blank">հետևյալ կրթական ծրագրերով (ՀՂՈՒՄ):</a></p>
+
+       <p>&nbsp;</p>
+
+       <p><strong>Մագիստրատուրայի</strong>&nbsp;<strong>ընդունելության</strong>&nbsp;<strong>մրցույթն</strong>&nbsp;<strong>իրականացվում</strong>&nbsp;<strong>է</strong>&nbsp;<strong>ըստ</strong>&nbsp;<strong>կրթական</strong>&nbsp;<strong>ծրագրերի՝</strong>&nbsp;<strong>հետևյալ</strong>&nbsp;<strong>չափանիշների</strong>&nbsp;<strong>առաջնահերթությամբ.</strong></p>
+
+       <p style="margin-left:36.0pt"><strong>1. նախորդ ուսումնառության արդյունքում ցուցաբերած ընդհանուր առաջադիմության միջին որակական գնահատական (ՄՈԳ),</strong></p>
+
+       <p style="margin-left:36.0pt"><strong>2. մասնագիտական առարկաներից ցուցաբերած առաջադիմության միջին որակական գնահատական,</strong></p>
+
+       <p style="margin-left:36.0pt"><strong>3. տպագրված գիտական աշխատանքների թիվը:</strong></p>
+
+       <p style="margin-left:9.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>Այլ բուհերի դիմորդների գնահատականները վերահաշվարկվում են՝ համաձայն ՀԱՊՀ Գիտական խորհրդի 28.08.2015թ. թիվ 01 ուրոշմամբ հաստատված ՀԱՊՀ ուսանողների գիտելիքների ստուգման և գնահատման ռեյթինգային համակարգի դրույթների:</em></p>
+
+       <p style="margin-left:9.0pt">&nbsp;</p>
+
+       <p style="margin-left:13.5pt"><strong>Ընդունելությունն</strong> <strong>իրականացվում</strong> <strong>է</strong><strong> 2 </strong><strong>փուլով</strong><strong>.</strong></p>
+
+       <p style="margin-left:13.5pt">&nbsp;</p>
+
+       <p style="margin-left:13.5pt"><strong>1-ին փուլով դիմումներն ընդունվում են 2021թ</strong><strong>․</strong> <strong>հունիսի 07-ից</strong> <a name="_Hlk516249421"><strong>մինչև</strong></a> <strong>հունիսի</strong><strong> 25-</strong><strong>ը</strong><strong>`</strong>&nbsp; <strong>ժամը</strong><strong> 09:00-ից մինչև 18</strong><strong>.00-ն</strong>:</p>
+
+       <p style="margin-left:13.5pt"><strong>1-</strong><strong>ին</strong> <strong>փուլով</strong> պետության կողմից ուսանողական նպաստների ձևով ուսման վարձի լրիվ փոխհատուցմամբ (անվճար) ընդունելության տեղերի մրցույթին մասնակցելու համար կարող են դիմել.</p>
+
+       <p style="margin-left:13.5pt">- ՀԱՊՀ բակալավրական կրթական ծրագրով շրջանավարտները, համաձայն ՀԱՊՀ Գիտական խորհրդի. թիվ 39 որոշման (04.06.2021թ.),</p>
+
+       <p style="margin-left:13.5pt">- ՀԱՊՀ մասնաճյուղերի շրջանավարտները`&nbsp;Երևանյան կրթահամալիրում կամ մասնաճյուղերում, եթե պահպանված է ավարտական ատեստավորման հանձնաժողովի ձևավորման ՀԱՊՀ Գիտական խորհրդի թիվ 39 որոշման (04.06.2021թ.) պահանջը,</p>
+
+       <p style="margin-left:13.5pt">- ՀԱՊՀ Հեռակա ուսուցման ֆակուլտետի և նախորդ տարիների շրջանավարտները:</p>
+
+       <p style="margin-left:13.5pt">&nbsp;</p>
+
+       <p style="margin-left:13.5pt"><strong>2-</strong><strong>րդ</strong> <strong>փուլ</strong><strong>ով</strong> <strong>դիմումներն</strong> <strong>ընդունվում</strong> <strong>են</strong> <strong>2021</strong><strong>թ</strong><strong>. </strong><a name="_Hlk516249459"><strong>օգոստոսի</strong></a> <strong>16</strong><strong>-</strong><strong>ից</strong> <strong>մինչև</strong> <strong>օգոստոսի</strong><strong> 2</strong><strong>6</strong><strong>-</strong><strong>ը</strong><strong>՝</strong> <strong>ժամը</strong> <strong>09:00-</strong><strong>ից մինչև 18</strong><strong>.00-ն</strong><strong>:</strong></p>
+
+       <p style="margin-left:13.5pt">&nbsp;</p>
+
+       <p style="margin-left:13.5pt"><strong>2-</strong><strong>րդ</strong> <strong>փուլով</strong> ուսման վարձի մասնակի զեղչի կիրառմամբ (վճարովի), ընդունելության տեղերի մրցույթին կարող են մասնակցել բակալավրի, դիպլոմավորված մասնագետի կամ մագիստրոսի որակավորում ունեցող դիմորդները:</p>
+
+       <p style="margin-left:13.5pt">&nbsp;</p>
+
+       <p style="margin-left:13.5pt"><strong>Ընդունելության համար դ</strong><strong>իմորդները</strong> <strong>ներկայացնում</strong> <strong>են</strong> <strong>հետևյալ</strong> <strong>փաստաթղթերը</strong><strong>.</strong></p>
+
+       <p style="margin-left:13.5pt">- դիմում` համալսարանի ռեկտորի անունով,</p>
+
+       <p style="margin-left:13.5pt">-բակալավրի, դիպլոմավորված մասնագետի կամ մագիստրոսի դիպլոմների և դրանց ներդիրների բնօրինակը և պատճենը,</p>
+
+       <p style="margin-left:13.5pt">- երաշխավորագիր,</p>
+
+       <p style="margin-left:13.5pt">- 4 լուսանկար (3x4սմ),</p>
+
+       <p style="margin-left:13.5pt">- անձնագիր (բնօրինակ և պատճեն),</p>
+
+       <p style="margin-left:13.5pt">- փաստաթուղթ զինվորական ծառայության առնչության մասին (բնօրինակ և պատճեն)</p>
+
+       <p style="margin-left:13.5pt">- սահմանված կարգով հաստատված տպագրված գիտական աշխատությունների ցուցակ</p>
+
+       <p style="margin-left:13.5pt">- փաuտաթղթերն ընդունելու և ձևակերպելու համար 1500 ՀՀ դրամ վճարելու վերաբերյալ անդորրագիրը:</p>
+
+   </div>
+      <app-main-footer>
+      </app-main-footer>
+  </section>
+</main>

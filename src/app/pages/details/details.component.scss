@@ -1,0 +1,92 @@
+main {
+  overflow: hidden;
+  transition: 1s;
+
+  .side-bar {
+    height: 100%;
+    background-image: url("../../../assets/images/navigation-back.png");
+    /* Create the parallax scrolling effect */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: var(--header-height);
+    display: flex;
+
+    .navigation {
+      font-size: 15px;
+      margin-top: 30px;
+      width: 100%;
+
+      ol, ul {
+        list-style: none;
+        margin: 0 auto;
+        padding: unset;
+        font-family: Tahoma, "Helvetica Neue", sans-serif;
+        font-style: normal;
+
+        .item {
+          padding: 20px;
+        }
+      }
+
+      a:hover, a:focus, a:active {
+        color: var(--primary-contrast);
+        text-decoration: none;
+      }
+
+      a {
+        text-decoration: none;
+        transition: color 0.1s, background-color 0.1s;
+      }
+
+      a {
+        position: relative;
+        display: block;
+        margin: 0 12px;
+        letter-spacing: 1px;
+        line-height: 16px;
+        font-weight: 400;
+        text-transform: uppercase;
+        transition: color 0.1s, background-color 0.1s, padding 0.2s ease-in;
+        color: var(--primary-contrast);
+      }
+
+      a::before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: var(--primary-contrast);
+        transform-origin: right top;
+        transform: scale(0, 1);
+        transition: color 0.1s, transform 0.2s ease-out;
+      }
+
+      a:active::before {
+        background-color: var(--primary-contrast);
+      }
+
+      a:hover::before, a:focus::before, a.active::before {
+        transform-origin: left top;
+        transform: scale(1, 1);
+      }
+    }
+  }
+
+  .main {
+    overflow: auto;
+    margin-left: 250px;
+    margin-top: 150px;
+
+    &.full {
+      margin-left: 0 !important;
+    }
+
+    .content {
+      margin: 0 25px;
+    }
+  }
+}

@@ -1,3 +1,16 @@
 {
-  "hello": "hello-en"
+  "search": "Search",
+  "admission": "admission",
+  "news": "news",
+  "structure": "structure",
+  "chairs": "chairs",
+  "council": "council",
+  "education": "education",
+  "for_student": "for student",
+  "documents": "documents",
+  "media": "media",
+  "about_us": "about us",
+  "latest_news": "Latest news",
+  "media_photos": "Media - Photos",
+  "see_more": "See More"
 }
